@@ -2,73 +2,72 @@
 
 ## Get the data
 
-- [ ] Read or open the csv. In spreadsheets fix the first row as the header. **How many rows are in the csv?**
+- [x] Read or open the csv. In spreadsheets fix the first row as the header. **How many rows are in the csv?**
 
 Python
 
-- [ ] use Pandas to read in the CSV as a dataframe
+- [x] use Pandas to read in the CSV as a dataframe
 - [ ] First import libraries:
- ```
+
+ ```python
         import pandas as pd
         import matplotlib.pyplot as plt
 ```
-- [ ] Then use `pd.read_csv`
 
+- [x] Then use `pd.read_csv`
 
 _points_: 5
 
-**Flag**
+### **Flag 1**
 
-- [ ] _flag_: `51`
+- [x] _flag_: `51`
 
 _flag type_: static
 
-
 ## Average Fastness
-- [ ] What’s the mean running time across all rows? Enter the number rounded to the precision of 1 decimal place.
+
+- [x] What’s the mean running time across all rows? Enter the number rounded to the precision of 1 decimal place.
 
 _points_: 5
 
 _requirement_: Get the data
 
-**Flag**
+### **Flag 2**
 
 - [ ] _flag_: `22.7`
 
 _flag type_: static
 
-
 ## Merlene OTTEY
-- [ ] Filter to runner with name 'Merlene OTTEY'. What are their fastest and slowest race times? Enter numbers separated by a comma rounded to 1 decimal place. E.g. 10.1,11.1
 
+- [x] Filter to runner with name 'Merlene OTTEY'. What are their fastest and slowest race times? Enter numbers separated by a comma rounded to 1 decimal place. E.g. 10.1,11.1
 
 Python
 
 - If the data frame is called `df` you can filter it like so `df[df[‘Name’] ==  'Merlene OTTEY']`
 
-
 _points_: 5
 
 _requirement_: Average Fastness
 
-**Flag**
+### **Flag 3**
 
-- [ ] _flag_: `\s*22.1\s*,\s*22.2\s*`
+- [x] _flag_: `\s*22.1\s*,\s*22.2\s*`
 
 _flag type_: regex
 
 
 ## Merlene OTTEY average time
-- [ ] How many seconds less is Merlene OTTEY’s average race time compared to the average race time for all other runners? The average race time for all other runners should *not* include Merlene's times. Enter the number rounded to 2 decimal places.
+
+- [x] How many seconds less is Merlene OTTEY’s average race time compared to the average race time for all other runners? The average race time for all other runners should *not* include Merlene's times. Enter the number rounded to 2 decimal places.
 
 Caution: If you’re using a filtered view on a spreadsheet, applying a function on the column applies the function to all rows, even ones not showing.
-
 
 _points_: 5
 
 _requirement_: Merlene OTTEY
 
-**Flag**
+### **Flag 4**
 
 - [ ] _flag_: `0.62`
 
@@ -86,7 +85,7 @@ _points_: 10
 
 _requirement_: Merlene OTTEY average time
 
-**Flag**
+### **Flag 5**
 
 - [ ] _flag_: `\s*JAM\s*,\s*USA\s*`
 
@@ -101,12 +100,11 @@ Python
 
 - You can use `matplotlib.pyplot` directly: `plt.hist(df[‘Result’])`. Or you can call plot on the dataframe which calls `matplotlib` internally: `df.plot(y=’Result’, kind='hist')`.
 
-
 _points_: 5
 
 _requirement_: Group by
 
-**Flag**
+### **Flag 6**
 
 - [ ] _flag_: `histobistro`
 
@@ -132,13 +130,11 @@ _points_: 10
 
 _requirement_: Histogram
 
-**Flag**
+### **Flag 7**
 
 - [ ] _flag_: `varyingvariance`
 
 _flag type_: static
-
-**Attached Image**
 
 ![histogram of race times](img/winning_running_times.png)
 

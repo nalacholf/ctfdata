@@ -56,7 +56,6 @@ _requirement_: Average Fastness
 
 _flag type_: regex
 
-
 ## Merlene OTTEY average time
 
 - [x] How many seconds less is Merlene OTTEY’s average race time compared to the average race time for all other runners? The average race time for all other runners should *not* include Merlene's times. Enter the number rounded to 2 decimal places.
@@ -111,7 +110,6 @@ _requirement_: Group by
 _flag type_: static
 
 **Attached Image**
-
 ![histogram of race times](img/histogram.png)
 
 
@@ -137,4 +135,3 @@ _requirement_: Histogram
 _flag type_: static
 
 ![histogram of race times](img/winning_running_times.png)
-

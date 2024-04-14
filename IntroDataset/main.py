@@ -2,6 +2,7 @@ import os
 import sys
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
 DEFAULT_PATH = "./200M_women.csv"
 DEFAULT_RESULT_COLUMN = "Result"
@@ -30,6 +31,16 @@ def leaderboard(df):
     medals = df.groupby(["Nationality"]).count().sort_values("Medal", ascending=False).reset_index()
     return medals
 
+def plot_histogram(df, result_column): 
+    plt.hist(df[result_column])
+    plt.show()
+
+def plot_scratter(df, result_column): 
+    df_scratter = df.groupby(["Year"]).min().reset_index()
+    plt.scatter(df_scratter["Year"], df_scratter[result_column])
+    plt.show()
+
+
 def main(csv_path= None, result_column= None, runner_name = None):        
     print(f'Running {sys.argv[0]} on {csv_path}')
     df = import_data(csv_path)
@@ -43,6 +54,8 @@ def main(csv_path= None, result_column= None, runner_name = None):
     leaders_df = leaderboard(df)
     leaders = leaders_df["Nationality"]
     print([l for l in leaders])
+    plot_histogram(df, result_column)
+    plot_scratter(df, result_column)
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:

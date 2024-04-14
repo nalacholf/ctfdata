@@ -76,9 +76,10 @@ _flag type_: static
 ## Group by
 
 - [x] Across all years, which nationalities are tied for winning the most medals? We want you to try to use a “group by” operation to group by each nationality and count the number of rows.
-- [ ] Enter comma separated values of the nationalities, sorted alphabetically, with no space after the comma. E.g. AUS,GBR
+- [~] Enter comma separated values of the nationalities, sorted alphabetically, with no space after the comma. E.g. AUS,GBR
 
 Python
+
 - Use `df.groupby`
 
 _points_: 10
@@ -87,14 +88,13 @@ _requirement_: Merlene OTTEY average time
 
 ### **Flag 5**
 
-- [ ] _flag_: `\s*JAM\s*,\s*USA\s*`
+- [~] _flag_: `\s*JAM\s*,\s*USA\s*`
 
 _flag type_: regex
 
-
 ## Histogram
 
-- [ ] Plot a histogram of the race times. This bins the times and counts the number of values we see in each bin. It should look something like the image attached. Since this is for teaching purposes we’ll take your word for capturing this flag. Once you create the plot use the flag `histobistro`. Why do you think the histogram looks this way?
+- [x] Plot a histogram of the race times. This bins the times and counts the number of values we see in each bin. It should look something like the image attached. Since this is for teaching purposes we’ll take your word for capturing this flag. Once you create the plot use the flag `histobistro`. Why do you think the histogram looks this way?
 
 Python
 
@@ -106,7 +106,7 @@ _requirement_: Group by
 
 ### **Flag 6**
 
-- [ ] _flag_: `histobistro`
+- [x] _flag_: `histobistro`
 
 _flag type_: static
 
@@ -117,13 +117,13 @@ _flag type_: static
 
 ## Scatter plot
 
-- [ ] Plot winning race time vs year on a scatter plot. The winning race time is the fastest time for that year. You’ll need to use a group by operation to find the winning time for each year, then make a plot with this data. What kind of trend do you see?
+- [x] Plot winning race time vs year on a scatter plot. The winning race time is the fastest time for that year. You’ll need to use a group by operation to find the winning time for each year, then make a plot with this data. What kind of trend do you see?
 
 It should look something like the image attached. Again we’ll take your word for capturing this flag. Once you create the plot use the flag `varyingvariance`. (5 points)
 
 Python
 
-- [ ] Use `df.groupby` first to find the winning times. Then use something like `plt.scatter` to plot winning race time vs year
+- [x] Use `df.groupby` first to find the winning times. Then use something like `plt.scatter` to plot winning race time vs year
 
 
 _points_: 10
@@ -132,7 +132,7 @@ _requirement_: Histogram
 
 ### **Flag 7**
 
-- [ ] _flag_: `varyingvariance`
+- [x] _flag_: `varyingvariance`
 
 _flag type_: static
 

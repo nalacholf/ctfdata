@@ -69,13 +69,13 @@ _requirement_: Merlene OTTEY
 
 ### **Flag 4**
 
-- [ ] _flag_: `0.62`
+- [x] _flag_: `0.62`
 
 _flag type_: static
 
-
 ## Group by
-- [ ] Across all years, which nationalities are tied for winning the most medals? We want you to try to use a “group by” operation to group by each nationality and count the number of rows.
+
+- [x] Across all years, which nationalities are tied for winning the most medals? We want you to try to use a “group by” operation to group by each nationality and count the number of rows.
 - [ ] Enter comma separated values of the nationalities, sorted alphabetically, with no space after the comma. E.g. AUS,GBR
 
 Python

@@ -26,6 +26,10 @@ def runner_stats(df, name, result_column):
     mean_time_other_runners = np.mean(df_other_runners[result_column])
     return fastest_time, slowest_time, mean_time, mean_time_other_runners
 
+def leaderboard(df):
+    medals = df.groupby(["Nationality"]).count().sort_values("Medal", ascending=False).reset_index()
+    return medals
+
 def main(csv_path= None, result_column= None, runner_name = None):        
     print(f'Running {sys.argv[0]} on {csv_path}')
     df = import_data(csv_path)
@@ -35,8 +39,10 @@ def main(csv_path= None, result_column= None, runner_name = None):
     print(f'Best, Worst times for {runner_name}:  {round(fastest_time, 1)}, {round(slowest_time, 1)}')
     print(f'Average time for {runner_name}:  {round(mean_time, 2)}')
     print(f'Average time for runners except {runner_name}:  {round(mean_time_other_runners, 2)}')
-    print(f'∆:  {round(mean_time_other_runners, 2)}')
-
+    print(f'∆: {round(mean_time_other_runners - mean_time, 2)}')
+    leaders_df = leaderboard(df)
+    leaders = leaders_df["Nationality"]
+    print([l for l in leaders])
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
